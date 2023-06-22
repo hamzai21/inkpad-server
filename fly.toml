@@ -1,0 +1,17 @@
+# fly.toml app configuration file generated for inkpad on 2023-06-22T04:05:14-04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "inkpad"
+primary_region = "iad"
+
+[env]
+  PORT = "3001"
+
+[http_service]
+  internal_port = 3001
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
